@@ -22,6 +22,15 @@ docker run busybox echo "hello from busybox"
 docker run -it busybox sh
 ```
 
+## Im Hintergrund starten und Befehl ausführen
+```
+docker run --rm -itd --name my-alpine alpine:latest
+
+docker container inspect my-alpine
+
+docker exec my-alpine ip addr show eth0
+```
+
 ## Alle container auflisten
 ```
 docker ps -a
