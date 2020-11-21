@@ -1,6 +1,12 @@
 # Unifi
 
-Controller URL
+Default adopt URL
+
+```
+http://unifi:8080/inform
+```
+
+Controller Webinterface URL
 
 ```
 https://unifi:8443
