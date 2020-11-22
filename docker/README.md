@@ -63,3 +63,20 @@ VOLUME /work
 WORKDIR /work
 ```
 
+# VLAN
+
+## Beste, lausige Versuche
+
+```
+docker network create -d ipvlan --subnet=192.168.5.0/24 --gateway=192.168.5.1 -o parent=eth0.5 ipvlan5
+
+docker network create -d macvlan  --subnet=192.168.20.0/24 --gateway=192.168.20.1 -o parent=eth0.20 --ipam-opt dhcp_interface=eth0.20 mcv20
+```
+
+## Löschen
+```
+docker network ls
+
+docker network rm mcv20
+```
+
