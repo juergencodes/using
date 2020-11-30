@@ -31,6 +31,11 @@ docker container inspect my-alpine
 docker exec my-alpine ip addr show eth0
 ```
 
+## SSH in laufenden container
+```
+docker exec -it d9a8f2235f8f /bin/bash
+```
+
 ## Alle container auflisten
 ```
 docker ps -a
