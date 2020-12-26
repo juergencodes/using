@@ -6,6 +6,12 @@ Windows+R
 control /name Microsoft.CredentialManager
 ```
 
+# Datum des letzten commits auf JETZT setzen
+
+```
+git commit --amend --no-edit --date "$(date)"
+```
+
 # Beispiel .gitignore mit typischen Einträgen
 
 ```
