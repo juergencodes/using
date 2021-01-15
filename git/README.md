@@ -12,6 +12,12 @@ control /name Microsoft.CredentialManager
 git commit --amend --no-edit --date "$(date)"
 ```
 
+# Autor (+ Datum) des letzten commits neu setzen
+
+```
+git commit --amend --reset-author --no-edit
+```
+
 # Beispiel .gitignore mit typischen Einträgen
 
 ```
