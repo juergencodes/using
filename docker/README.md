@@ -88,6 +88,10 @@ docker run --net=macvlan20 --ip=192.168.20.64 --dns=192.168.20.1 -it --rm alpine
 docker run --net=macvlan30 --ip=192.168.30.65 --dns=192.168.30.1 -it --rm alpine /bin/sh
 ```
 
+https://hicu.be/bridge-vs-macvlan
+https://hicu.be/docker-networking-macvlan-bridge-mode-configuration
+https://hicu.be/docker-networking-macvlan-vlan-configuration
+
 ## Löschen
 ```
 docker network ls

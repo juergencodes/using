@@ -18,6 +18,18 @@ git commit --amend --no-edit --date "$(date)"
 git commit --amend --reset-author --no-edit
 ```
 
+# Komplette Historie rebasen
+
+```
+git rebase --root -i
+```
+
+# Mit +x hinzufügen
+
+```
+git add --chmod=+x *.sh
+```
+
 # Beispiel .gitignore mit typischen Einträgen
 
 ```
