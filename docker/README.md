@@ -99,3 +99,25 @@ docker network ls
 docker network rm mcv20
 ```
 
+# NFS
+
+## Docker CLI
+
+docker volume create \
+     --driver local \
+     --opt type=nfs \
+     --opt o=addr=nas,rw \
+     --opt device=:/volume1/server/backup \
+     backup
+
+## Docker compose
+
+```
+...
+volumes:
+  backup:
+    driver_opts:
+      type: nfs
+      o: "addr=nas,rw"
+      device: ":/volume1/server/backup"
+```
