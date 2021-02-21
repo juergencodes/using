@@ -103,12 +103,14 @@ docker network rm mcv20
 
 ## Docker CLI
 
+```
 docker volume create \
      --driver local \
      --opt type=nfs \
      --opt o=addr=nas,rw \
      --opt device=:/volume1/server/backup \
      backup
+```
 
 ## Docker compose
 
