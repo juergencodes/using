@@ -1,0 +1,40 @@
+<assembly>
+  <id>tool1</id>
+  <formats>
+    <format>zip</format>
+  </formats>
+  <includeBaseDirectory>false</includeBaseDirectory>
+
+  <moduleSets>
+    <moduleSet>
+      <includes>
+        <include>de.mine:tool1</include>
+      </includes>
+      <binaries>
+        <outputDirectory>/</outputDirectory>
+        <unpack>false</unpack>
+        <dependencySets>
+          <dependencySet>
+            <outputDirectory>/lib</outputDirectory>
+          </dependencySet>
+        </dependencySets>
+      </binaries>
+    </moduleSet>
+  </moduleSets>
+
+  <fileSets>
+    <fileSet>
+      <directory>tool1/src/main/config</directory>
+      <outputDirectory>/config</outputDirectory>
+      <filtered>true</filtered>
+    </fileSet>
+    <fileSet>
+      <directory>tool1/src/main/run/${target.os}</directory>
+      <outputDirectory>/</outputDirectory>
+      <includes>
+        <include>*</include>
+      </includes>
+      <filtered>true</filtered>
+    </fileSet>
+  </fileSets>
+</assembly>

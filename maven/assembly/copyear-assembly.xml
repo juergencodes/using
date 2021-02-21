@@ -1,0 +1,20 @@
+<assembly>
+  <id>ears</id>
+  <formats>
+    <format>dir</format>
+  </formats>
+  <includeBaseDirectory>false</includeBaseDirectory>
+
+  <moduleSets>
+    <moduleSet>
+      <includes>
+        <include>abc:xyz-enterprise</include>
+      </includes>
+      <binaries>
+        <outputDirectory>/</outputDirectory>
+        <unpack>false</unpack>
+        <includeDependencies>false</includeDependencies>
+      </binaries>
+    </moduleSet>
+  </moduleSets>
+</assembly>

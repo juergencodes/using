@@ -1,0 +1,14 @@
+	 <bean class="SimpleTimingAspect">
+	 	<property name="graphingAppenders">
+	 		<list>
+	 			<bean class="org.perf4j.log4j.GraphingStatisticsAppender">
+	 				<property name="name" value="mean" />
+	 				<property name="graphType" value="Mean" />
+	 			</bean>
+	 			<bean class="org.perf4j.log4j.GraphingStatisticsAppender">
+	 				<property name="name" value="max" />
+	 				<property name="graphType" value="Max" />
+	 			</bean>
+	 		</list>
+	 	</property>
+	 </bean>

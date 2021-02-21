@@ -1,0 +1,25 @@
+e :: [Int] -> Int
+e [x] = x
+e (x:xs) = last xs
+
+
+
+t1 :: Int -> Int
+t1 x = x + 2 
+
+t2 :: Int -> Int
+t2 x = x - 1 
+
+t :: (Int, Int) -> Int
+t (x,y) | x `mod` 2 == 0 = t2 y
+        | otherwise = t1 y
+
+f :: [Int] -> [Int]
+f [] = [1]
+f xs = xs ++ [t (length(xs), (e xs))]
+
+
+
+
+main = do
+  putStrLn "go"

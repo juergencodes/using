@@ -1,0 +1,50 @@
+<assembly>
+  <id>bin</id>
+  <formats>
+    <format>zip</format>
+  </formats>
+  <includeBaseDirectory>false</includeBaseDirectory>
+
+  <dependencySets>
+    <dependencySet>
+      <outputDirectory>/</outputDirectory>
+      <useTransitiveDependencies>true</useTransitiveDependencies>
+      <includes>
+        <include>${groupId}:${artifactId}</include>
+      </includes>
+    </dependencySet>
+    <dependencySet>
+      <outputDirectory>/lib</outputDirectory>
+      <useProjectArtifact>false</useProjectArtifact>
+    </dependencySet>
+  </dependencySets>
+
+
+  <fileSets>
+    <fileSet>
+      <directory>src/main/config</directory>
+      <outputDirectory>/config</outputDirectory>
+      <filtered>true</filtered>
+      <includes>
+        <include>*.properties</include>
+      </includes>
+    </fileSet>
+    <fileSet>
+      <directory>src/main/config</directory>
+      <outputDirectory>/config</outputDirectory>
+      <includes>
+        <include>*</include>
+      </includes>
+      <excludes>
+        <exclude>*.properties</exclude>
+      </excludes>
+    </fileSet>
+    <fileSet>
+      <directory>src/main/run</directory>
+      <outputDirectory>/</outputDirectory>
+      <includes>
+        <include>*</include>
+      </includes>
+    </fileSet>
+  </fileSets>
+</assembly>
