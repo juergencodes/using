@@ -1,0 +1,7 @@
+- hosts: "*"
+  become: yes
+  tasks:
+    - name: Install xe guest tools
+      apt:
+        name: xe-guest-utilities
+        update_cache: yes
