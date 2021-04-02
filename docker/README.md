@@ -68,6 +68,17 @@ VOLUME /work
 WORKDIR /work
 ```
 
+Starten in PowerShell
+
+```
+docker run -it -v ${PWD}:/work mathit/shell-tools
+```
+
+Starten in Eingabeaufforderung
+
+```
+docker run -ti -v %cd%:/work mathit/shell-tools
+
 # VLAN
 
 ## VLAN anlegen per macvlan
