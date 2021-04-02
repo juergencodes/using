@@ -23,7 +23,7 @@ umount /mnt/nas
 permanent
 
 ```
-sudo nano /etc/fstab
+sudo nano /etc/fstab
 
 
 nas:/volume1/server /mnt/nas nfs defaults 0 0
