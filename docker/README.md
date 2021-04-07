@@ -78,6 +78,7 @@ Starten in Eingabeaufforderung
 
 ```
 docker run -ti -v %cd%:/work mathit/shell-tools
+```
 
 # VLAN
 
@@ -101,7 +102,7 @@ docker run --net=macvlan30 --ip=192.168.30.65 --dns=192.168.30.1 -it --rm alpine
 
 https://hicu.be/bridge-vs-macvlan
 https://hicu.be/docker-networking-macvlan-bridge-mode-configuration
-https://hicu.be/docker-networking-macvlan-vlan-configuration
+
 
 ## Löschen
 ```
@@ -133,4 +134,10 @@ volumes:
       type: nfs
       o: "addr=nas,rw"
       device: ":/volume1/server/backup"
+```
+
+# Cleanup
+
+```
+docker system prune -a -f
 ```
